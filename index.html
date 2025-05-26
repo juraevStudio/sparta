@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title></title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__box">
+                <a href="#" class="header__logo">
+                    <p class="top">спарта</p>
+                    <p class="bottom">стрелковый клуб</p>
+                </a>
+                <div class="header__wrap">
+                    <div class="header__soc">
+                        <a href="#" class="item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                                <path d="M14.9368 5.73429C14.6458 5.38429 14.729 5.22857 14.9368 4.91571C14.9405 4.91214 17.3428 1.75071 17.5904 0.678571L17.5919 0.677857C17.7149 0.287143 17.5919 0 16.9971 0H15.029C14.528 0 14.297 0.246429 14.1732 0.522143C14.1732 0.522143 13.1712 2.80643 11.7537 4.28714C11.2961 4.715 11.0846 4.85214 10.8349 4.85214C10.7119 4.85214 10.5206 4.715 10.5206 4.32429V0.677857C10.5206 0.209286 10.3804 0 9.9656 0H6.87099C6.55673 0 6.36997 0.218571 6.36997 0.422143C6.36997 0.866429 7.07875 0.968571 7.15225 2.21857V4.93071C7.15225 5.525 7.03899 5.63429 6.78774 5.63429C6.11871 5.63429 4.49491 3.34071 3.53262 0.715714C3.33837 0.206428 3.14861 0.000714234 2.64384 0.000714234H0.675023C0.113254 0.000714234 0 0.247143 0 0.522857C0 1.01 0.669023 3.43214 3.11111 6.63214C4.73866 8.81643 7.03074 10 9.11582 10C10.3691 10 10.5221 9.73714 10.5221 9.285C10.5221 7.19786 10.4089 7.00071 11.0366 7.00071C11.3276 7.00071 11.8287 7.13786 12.9987 8.19143C14.336 9.44071 14.5558 10 15.3043 10H17.2723C17.8334 10 18.1176 9.73714 17.9541 9.21857C17.5799 8.12786 15.0508 5.88429 14.9368 5.73429Z" fill="#F7ECD6"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4.20241 13.1952L4.78161 13.5336C5.75836 14.1032 6.86927 14.4023 8 14.4C9.2658 14.4 10.5032 14.0246 11.5556 13.3214C12.6081 12.6182 13.4284 11.6186 13.9128 10.4492C14.3972 9.27972 14.524 7.99289 14.277 6.75142C14.0301 5.50994 13.4205 4.36957 12.5255 3.47451C11.6304 2.57946 10.4901 1.96992 9.24858 1.72297C8.0071 1.47603 6.72028 1.60277 5.55083 2.08717C4.38139 2.57157 3.38184 3.39187 2.6786 4.44435C1.97536 5.49682 1.60001 6.73419 1.60001 7.99999C1.60001 9.14879 1.90161 10.2504 2.46721 11.2192L2.80481 11.7984L2.28241 13.7192L4.20241 13.1952ZM0.0032107 16L1.08481 12.0256C0.372121 10.8039 -0.0023125 9.41438 1.07458e-05 7.99999C1.07458e-05 3.5816 3.58161 0 8 0C12.4184 0 16 3.5816 16 7.99999C16 12.4184 12.4184 16 8 16C6.58623 16.0023 5.19733 15.6281 3.97601 14.916L0.0032107 16ZM5.11281 4.2464C5.22001 4.2384 5.328 4.2384 5.4352 4.2432C5.4784 4.2464 5.52161 4.2512 5.56481 4.256C5.69201 4.2704 5.832 4.348 5.8792 4.4552C6.1176 4.99599 6.3496 5.54079 6.5736 6.08719C6.6232 6.20879 6.5936 6.36479 6.4992 6.51679C6.43428 6.61958 6.36405 6.71891 6.2888 6.81439C6.1984 6.93039 6.004 7.14319 6.004 7.14319C6.004 7.14319 5.9248 7.23759 5.9552 7.35519C5.9664 7.39999 6.0032 7.46479 6.0368 7.51919L6.084 7.59519C6.2888 7.93679 6.564 8.28319 6.9 8.60959C6.996 8.70239 7.0896 8.79759 7.1904 8.88639C7.5648 9.21679 7.9888 9.48639 8.4464 9.68639L8.4504 9.68799C8.5184 9.71759 8.5528 9.73359 8.652 9.77599C8.7016 9.79679 8.7528 9.81519 8.8048 9.82879C8.85854 9.84248 8.91513 9.8399 8.9674 9.82138C9.01967 9.80287 9.06526 9.76925 9.0984 9.72479C9.6776 9.02319 9.7304 8.97759 9.7352 8.97759V8.97919C9.77544 8.94166 9.82324 8.91318 9.8754 8.89565C9.92756 8.87813 9.98286 8.87197 10.0376 8.87759C10.0856 8.88079 10.1344 8.88959 10.1792 8.90959C10.604 9.10399 11.2992 9.40719 11.2992 9.40719L11.7648 9.61599C11.8432 9.65359 11.9144 9.74239 11.9168 9.82799C11.92 9.88159 11.9248 9.96799 11.9064 10.1264C11.8808 10.3336 11.8184 10.5824 11.756 10.7128C11.7133 10.8018 11.6565 10.8833 11.588 10.9544C11.5073 11.0391 11.4189 11.1163 11.324 11.1848C11.2912 11.2095 11.2578 11.2335 11.224 11.2568C11.1245 11.3199 11.0223 11.3786 10.9176 11.4328C10.7116 11.5422 10.4841 11.605 10.2512 11.6168C10.1032 11.6248 9.9552 11.636 9.8064 11.628C9.8 11.628 9.352 11.5584 9.352 11.5584C8.21461 11.2592 7.16272 10.6988 6.28 9.92159C6.0992 9.76239 5.932 9.59119 5.76081 9.42079C5.04881 8.71279 4.51121 7.94879 4.18481 7.22719C4.01774 6.87302 3.9275 6.48752 3.92001 6.09599C3.91671 5.61028 4.07548 5.13733 4.37121 4.752C4.42961 4.6768 4.48481 4.5984 4.58001 4.508C4.68161 4.412 4.74561 4.3608 4.81521 4.3256C4.90774 4.27922 5.0087 4.25201 5.11201 4.2456L5.11281 4.2464Z" fill="#F7ECD6"/>
+                                <path d="M4.20241 13.1952L4.78161 13.5336C5.75836 14.1032 6.86927 14.4023 8 14.4C9.2658 14.4 10.5032 14.0246 11.5556 13.3214C12.6081 12.6182 13.4284 11.6186 13.9128 10.4492C14.3972 9.27972 14.524 7.99289 14.277 6.75142C14.0301 5.50994 13.4205 4.36957 12.5255 3.47451C11.6304 2.57946 10.4901 1.96992 9.24858 1.72297C8.0071 1.47603 6.72028 1.60277 5.55083 2.08717C4.38139 2.57157 3.38184 3.39187 2.6786 4.44435C1.97536 5.49682 1.60001 6.73419 1.60001 7.99999C1.60001 9.14879 1.90161 10.2504 2.46721 11.2192L2.80481 11.7984L2.28241 13.7192L4.20241 13.1952ZM0.0032107 16L1.08481 12.0256C0.372121 10.8039 -0.0023125 9.41438 1.07458e-05 7.99999C1.07458e-05 3.5816 3.58161 0 8 0C12.4184 0 16 3.5816 16 7.99999C16 12.4184 12.4184 16 8 16C6.58623 16.0023 5.19733 15.6281 3.97601 14.916L0.0032107 16ZM5.11281 4.2464C5.22001 4.2384 5.328 4.2384 5.4352 4.2432C5.4784 4.2464 5.52161 4.2512 5.56481 4.256C5.69201 4.2704 5.832 4.348 5.8792 4.4552C6.1176 4.99599 6.3496 5.54079 6.5736 6.08719C6.6232 6.20879 6.5936 6.36479 6.4992 6.51679C6.43428 6.61958 6.36405 6.71891 6.2888 6.81439C6.1984 6.93039 6.004 7.14319 6.004 7.14319C6.004 7.14319 5.9248 7.23759 5.9552 7.35519C5.9664 7.39999 6.0032 7.46479 6.0368 7.51919L6.084 7.59519C6.2888 7.93679 6.564 8.28319 6.9 8.60959C6.996 8.70239 7.0896 8.79759 7.1904 8.88639C7.5648 9.21679 7.9888 9.48639 8.4464 9.68639L8.4504 9.68799C8.5184 9.71759 8.5528 9.73359 8.652 9.77599C8.7016 9.79679 8.7528 9.81519 8.8048 9.82879C8.85854 9.84248 8.91513 9.8399 8.9674 9.82138C9.01967 9.80287 9.06526 9.76925 9.0984 9.72479C9.6776 9.02319 9.7304 8.97759 9.7352 8.97759V8.97919C9.77544 8.94166 9.82324 8.91318 9.8754 8.89565C9.92756 8.87813 9.98286 8.87197 10.0376 8.87759C10.0856 8.88079 10.1344 8.88959 10.1792 8.90959C10.604 9.10399 11.2992 9.40719 11.2992 9.40719L11.7648 9.61599C11.8432 9.65359 11.9144 9.74239 11.9168 9.82799C11.92 9.88159 11.9248 9.96799 11.9064 10.1264C11.8808 10.3336 11.8184 10.5824 11.756 10.7128C11.7133 10.8018 11.6565 10.8833 11.588 10.9544C11.5073 11.0391 11.4189 11.1163 11.324 11.1848C11.2912 11.2095 11.2578 11.2335 11.224 11.2568C11.1245 11.3199 11.0223 11.3786 10.9176 11.4328C10.7116 11.5422 10.4841 11.605 10.2512 11.6168C10.1032 11.6248 9.9552 11.636 9.8064 11.628C9.8 11.628 9.352 11.5584 9.352 11.5584C8.21461 11.2592 7.16272 10.6988 6.28 9.92159C6.0992 9.76239 5.932 9.59119 5.76081 9.42079C5.04881 8.71279 4.51121 7.94879 4.18481 7.22719C4.01774 6.87302 3.9275 6.48752 3.92001 6.09599C3.91671 5.61028 4.07548 5.13733 4.37121 4.752C4.42961 4.6768 4.48481 4.5984 4.58001 4.508C4.68161 4.412 4.74561 4.3608 4.81521 4.3256C4.90774 4.27922 5.0087 4.25201 5.11201 4.2456L5.11281 4.2464Z" fill="#F7ECD6" fill-opacity="0.2"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__right">
+                        <p class="header__map">ул. Первомайская, 198</p>
+                        <a href="tel:8 (901) 459 40 06" class="header__phone">8 (901) 459 40 06</a>
+                    </div>
+                    <a href="#services" class="main_btn">
+                        <span>оставить заявку</span>
+                    </a>
+                </div>
+                <button class="header__burgir">
+                    <span>
+                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H32C31.212 0.398251 30.7152 1.20603 30.7152 2.08893V4V5.91107C30.7152 6.79397 31.212 7.60175 32 8H0C0.787982 7.60175 1.28481 6.79397 1.28481 5.91107V4V2.08893C1.28481 1.20603 0.787982 0.398251 0 0Z" fill="#F7ECD6"/>
+                        </svg>                            
+                    </span>
+                    <span>
+                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H32C31.212 0.398251 30.7152 1.20603 30.7152 2.08893V4V5.91107C30.7152 6.79397 31.212 7.60175 32 8H0C0.787982 7.60175 1.28481 6.79397 1.28481 5.91107V4V2.08893C1.28481 1.20603 0.787982 0.398251 0 0Z" fill="#F7ECD6"/>
+                        </svg>                            
+                    </span>
+                    <span>
+                        <svg width="32" height="8" viewBox="0 0 32 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H32C31.212 0.398251 30.7152 1.20603 30.7152 2.08893V4V5.91107C30.7152 6.79397 31.212 7.60175 32 8H0C0.787982 7.60175 1.28481 6.79397 1.28481 5.91107V4V2.08893C1.28481 1.20603 0.787982 0.398251 0 0Z" fill="#F7ECD6"/>
+                        </svg>                            
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <a href="#services" class="main_btn">
+                <span>оставить заявку</span>
+            </a>
+        </section>
+        <section class="weapons">
+            <div class="container">
+                <div class="title_h2">
+                    <p class="h2">Виды оружия</p>
+                </div>
+                <div class="weapons__box">
+                    <a href="#" class="weapons__block left">
+                        <img src="img/weapons-left.png" alt="" class="left">
+                        <div class="num"><span>1</span></div>
+                        <p class="title">Стрельба из лука</p>
+                        <img src="img/weapons1.png" alt="" class="img">
+                    </a>
+                    <a href="#" class="weapons__block center">
+                        <img src="img/weapons-center.png" alt="" class="center">
+                        <div class="num"><span>2</span></div>
+                        <p class="title">Стрельба из арбалета</p>
+                        <img src="img/weapons2.png" alt="" class="img">
+                    </a>
+                    <a href="#" class="weapons__block right">
+                        <img src="img/weapons-right.png" alt="" class="right">
+                        <div class="num"><span>3</span></div>
+                        <p class="title">Пневматическое оружие</p>
+                        <img src="img/weapons3.png" alt="" class="img">
+                    </a>
+                </div>
+                <div class="weapons__btn">
+                    <a href="#services" class="main_btn">
+                        <span>стрелять</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about_us">
+            <img src="img/about-us-bg-top.png" alt="" class="top">
+            <img src="img/about-us-bg-bottom.png" alt="" class="bottom">
+            <img src="img/about_us-mobile.png" alt="" class="mobile">
+            <div class="container">
+                <div class="about_us__wrap">
+                    <div class="wrap_top">
+                        <div class="title_h2">
+                            <p class="h2">о нас</p>
+                        </div>
+                        <p class="h5">Стрелковый клуб «СПАРТА» был открыт 12 декабря 2022 года</p>
+                        <p class="text">Если Вы хотите необычно провести выходные и получить новые ощущения, Вам стоит к нам! Здесь Вы сможете отлично провести время в компании родных и друзей, а также пострелять из лука, арбалета или пневматического оружия и показать свою ловкость и физическую форму.</p>
+                        <p class="text">Для того, чтобы исключить риск травматизации и сложности с освоением лука, арбалета или пневматического оружия, в клубе работает наш инструктор. Даже если Вы никогда не пробовали себя ни в чём подобном, не расстраивайтесь: инструктор поможет Вам разобраться со всем.</p>
+                    </div>
+                    <div class="wrap_bottom">
+                        <p class="text">Активный отдых в стрелковом клубе «СПАРТА» подарит Вам незабываемые впечатления</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="container">
+                <div class="title_h2">
+                    <p class="h2">Услуги</p>
+                </div>
+                <p class="services_h5">Разовые</p>
+                <div class="services__box">
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">900 р/час</p>
+                                <p class="title">Стрельба из традиционного лука  </p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">900 р/час</p>
+                                <p class="title">Стрельба из арбалета</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/3.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">900 р/час</p>
+                                <p class="title">Пневматическое оружие</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/4.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">1 700 р/час</p>
+                                <p class="title">Комплексный, три вида оружия: лук, арбалет, пневматика</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/5.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">1 200 р/час</p>
+                                <p class="title">Стрельба из блочного лука</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 1 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/6.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">900 р/час</p>
+                                <p class="title">Стрельба из классического лука</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/7.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">700 р/час</p>
+                                <p class="title">Из своего оружия</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/8.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">600 р/час</p>
+                                <p class="title">Пистолет</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">50 выстрелов</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/9.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">900 р/час</p>
+                                <p class="title">Пистолет</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">Винтовка</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/10.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">700 р/час</p>
+                                <p class="title">Автомат</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="h6">за 2 человека</p>
+                                <p class="link">Забронировать</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="subscription">
+            <div class="container">
+                <div class="title_h3">
+                    <p class="h3">Абонемент</p>
+                </div>
+                <div class="subscription__box">
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/11.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">2 500р</p>
+                                <p class="title">4 занятия</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="link">Приобрести</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/12.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">3 200р</p>
+                                <p class="title">8 занятий</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="link">Приобрести</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/13.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">4 000р</p>
+                                <p class="title">12 занятий</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="link">Приобрести</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="services__block">
+                        <div class="img">
+                            <img src="img/14.png" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="wrap">
+                                <p class="price">5 000р</p>
+                                <p class="title">Безлимитный</p>
+                            </div>
+                            <div class="wrpa">
+                                <p class="link">Приобрести</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="rent">
+            <div class="container">
+                <div class="rent__wrap">
+                    <img src="img/Kartinka.png" alt="" class="right">
+                    <div class="wrap">
+                        <div class="title_h3">
+                            <p class="h3">Аренда зала</p>
+                        </div>
+                        <div class="box">
+                            <p class="text">3 вида оружия «лук, арбалет, пневматика» - 2 комплекта каждого!</p>
+                            <p class="text">Безлимитные выстрелы и тренерское сопровождение включены</p>
+                        </div>
+                        <div class="box">
+                            <div class="block">
+                                <p class="price">5 000р</p>
+                                <p class="h5">до 10 человек</p>
+                            </div>
+                            <div class="block">
+                                <p class="price">6 000р</p>
+                                <p class="h5">до 15 человек</p>
+                            </div>
+                            <div class="block">
+                                <p class="price">7 000р</p>
+                                <p class="h5">Больше 15 человек</p>
+                            </div>
+                        </div>
+                        <button class="main_btn">
+                            <span>Забронировать</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services2">
+            <img src="img/about-us-bg-top.png" alt="" class="top">
+            <img src="img/about-us-bg-bottom.png" alt="" class="bottom">
+            <div class="container">
+                <div class="title_h2">
+                    <p class="h2">Дополнительные услуги</p>
+                </div>
+                <div class="services2__top">
+                    <div class="left">
+                        <p class="text">Поможем организовать на Ваше мероприятие или праздник услуги волшебника и иллюзиониста! </p>
+                    </div>
+                    <div class="center">
+                        <p class="text">Выберите из списка программу, которая Вам интересна.</p>
+                    </div>
+                    <div class="right">
+                        <p class="text">Шоу сделано так, чтобы каждый принял участие, ведь программа полностью интерактивная!</p>
+                    </div>
+                </div>
+                <div class="title_h3">
+                    <p class="h3">форматы выступления</p>
+                </div>
+                <div class="services2__box">
+                    <div class="services2__block">
+                        <div class="wrap_top">
+                            <p class="title">Программа по 20-25 минут</p>
+                        </div>
+                        <div class="wrap_bottom">
+                            <div class="wrap">
+                                <ul class="ul">
+                                    <li class="li">Вы когда-нибудь видели, что рисунок оживает?</li>
+                                    <li class="li">Вы рисуете рыбку, и она становится самой настоящей <span>за дополнительную плату можно оставить себе</span></li>
+                                    <li class="li">Фокусы с перемещением предметов</li>
+                                    <li class="li">Превращение колы в яблочный сок</li>
+                                    <li class="li">И многое другое, о чём только Вы узнаете при встрече с фокусником</li>
+                                </ul>
+                            </div>
+                            <p class="price">9 000р</p>
+                        </div>
+                    </div>
+                    <div class="services2__block">
+                        <div class="wrap_top">
+                            <p class="title">Программа по 30-40 минут</p>
+                        </div>
+                        <div class="wrap_bottom">
+                            <div class="wrap">
+                                <ul class="ul">
+                                    <li class="li"><p class="h5">Программа №1</p></li>
+                                    <li class="li">Появление мягкого и милого кролика</li>
+                                    <li class="li">Горящая трость</li>
+                                    <li class="li">Фокусник изо рта вытягивает бумажную ленту в 20 метров</li>
+                                    <li class="li">Из огня появляются конфеты/мыльные пузыри/Ваш небольшой подарок</li>
+                                </ul>
+                            </div>
+                            <p class="price">10 000р</p>
+                        </div>
+                    </div>
+                    <div class="services2__block">
+                        <div class="wrap_top">
+                            <p class="title">Программа Всё включено по 50-60 минут</p>
+                        </div>
+                        <div class="wrap_bottom">
+                            <div class="wrap">
+                                <ul class="ul">
+                                    <li class="li"><p class="h5">Программа №1 и №2</p></li>
+                                    <li class="li">Фокус с появлением купюры в фрукте</li>
+                                    <li class="li">Фокус с собственной тенью</li>
+                                    <li class="li">Раскроем секрет и научимся одному фокусу</li>
+                                    <li class="li">И многое другое, о чём только Вы узнаете при встрече с фокусником</li>
+                                </ul>
+                            </div>
+                            <p class="price">13 000р</p>
+                        </div>
+                    </div>
+                    <div class="services2__block">
+                        <div class="wrap_top">
+                            <p class="title">Программа по 30-40 минут</p>
+                        </div>
+                        <div class="wrap_bottom">
+                            <div class="wrap">
+                                <ul class="ul">
+                                    <li class="li"><p class="h5">Программа №1</p></li>
+                                    <li class="li">Появление мягкого и милого кролика</li>
+                                    <li class="li">Горящая трость</li>
+                                    <li class="li">Фокусник изо рта вытягивает бумажную ленту в 20 метров</li>
+                                    <li class="li">Из огня появляются конфеты/мыльные пузыри/Ваш небольшой подарок</li>
+                                </ul>
+                            </div>
+                            <p class="price">10 000р</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services2__bottom">
+                    <p class="h6">В каждую программу можно вносить изменения на Ваше усмотрение. Программа учитывается под возраст и количества детей. Интересно будет каждому!</p>
+                    <p class="h6">Услуги аниматора оплачиваются отдельно</p>
+                </div>
+            </div>
+        </section>
+        <section class="present">
+            <div class="container">
+                <div class="title_h2">
+                    <p class="h2">Подарочные сертификаты</p>
+                </div>
+                <div class="present__box">
+                    <div class="present__block">
+                        <div class="top">
+                            <p class="title">Комплексный час</p>
+                        </div>
+                        <ul class="ul">
+                            <li class="li">Три вида оружия: лук, арбалет, пневматика</li>
+                        </ul>
+                        <p class="price">1 800р</p>
+                    </div>
+                    <div class="present__block">
+                        <div class="top">
+                            <p class="title">Комплексный час</p>
+                        </div>
+                        <ul class="ul">
+                            <li class="li">Три вида оружия: лук, арбалет, пневматика</li>
+                        </ul>
+                        <p class="price">1 800р</p>
+                    </div>
+                    <div class="present__block">
+                        <div class="top">
+                            <p class="title">Комплексный час</p>
+                        </div>
+                        <ul class="ul">
+                            <li class="li">Три вида оружия: лук, арбалет, пневматика</li>
+                        </ul>
+                        <p class="price">1 800р</p>
+                    </div>
+                </div>
+                <div class="present__btn">
+                    <button class="main_btn">
+                        <span>Забронировать</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="enroll">
+            <img src="img/enroll-top.png" alt="" class="top">
+            <img src="img/enroll-bottom.png" alt="" class="bottom">
+            <div class="container">
+                <div class="wrap">
+                    <div class="title_h2">
+                        <p class="h2">Как к нам записаться</p>
+                    </div>
+                    <ul class="ul">
+                        <li class="li">Нужно определиться с датой и временем посещения, мы работаем каждый день с 10:00 до 22:00 без выходных</li>
+                        <li class="li">Позвонить нам на номер 8 (901) 459-40-06 и уточнить у администратора, свободно ли удобное время, или узнать доступные варианты</li>
+                        <li class="li">Администратор запишет Вас по номеру телефона и инструктор будет ожидать Вас в назначенное время в тире по адресу: ул. Первомайская, 198</li>
+                    </ul>
+                    <p class="h6">Или можете оставить небольшую информацию о Вас и как хотели бы отдохнуть. Наш администратор свяжется с Вами!</p>
+                    <div class="enroll__form">
+                        <div class="block">
+                            <div class="input">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="input">
+                                <input class="input_phone tel" type="text" placeholder="+7 777 777 77 77">
+                            </div>
+                            <div class="input">
+                                <input type="email" placeholder="E-Mail">
+                            </div>
+                        </div>
+                        <div class="block">
+                            <textarea class="textarea" placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="block">
+                            <button class="main_btn">
+                                <span>Забронировать</span>
+                            </button>
+                        </div>
+                        <div class="block">
+                            <p class="h6">При нажтии на кнопку <a href="#">“Забронировать”</a> вы даете согласие на обработку персональных данных</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <img src="img/enroll-top.png" alt="" class="top">
+            <img src="img/enroll-bottom.png" alt="" class="bottom">
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ташкент</a><a href="https://yandex.uz/maps/65/novosibirsk/house/pervomayskaya_ulitsa_198/bEoYdgFnT0IFQFtufXV2dXRiYA==/?ll=83.067672%2C54.974814&utm_medium=mapframe&utm_source=maps&z=17.05" style="color:#eee;font-size:12px;position:absolute;top:14px;">Первомайская улица, 198 — Яндекс Карты</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUre0A2PB" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="#" class="footer__logo">
+                    <p class="top">спарта</p>
+                    <p class="bottom">стрелковый клуб</p>
+                </a>
+                <div class="footer__soc">
+                    <a href="#" class="item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                            <path d="M14.9368 5.73429C14.6458 5.38429 14.729 5.22857 14.9368 4.91571C14.9405 4.91214 17.3428 1.75071 17.5904 0.678571L17.5919 0.677857C17.7149 0.287143 17.5919 0 16.9971 0H15.029C14.528 0 14.297 0.246429 14.1732 0.522143C14.1732 0.522143 13.1712 2.80643 11.7537 4.28714C11.2961 4.715 11.0846 4.85214 10.8349 4.85214C10.7119 4.85214 10.5206 4.715 10.5206 4.32429V0.677857C10.5206 0.209286 10.3804 0 9.9656 0H6.87099C6.55673 0 6.36997 0.218571 6.36997 0.422143C6.36997 0.866429 7.07875 0.968571 7.15225 2.21857V4.93071C7.15225 5.525 7.03899 5.63429 6.78774 5.63429C6.11871 5.63429 4.49491 3.34071 3.53262 0.715714C3.33837 0.206428 3.14861 0.000714234 2.64384 0.000714234H0.675023C0.113254 0.000714234 0 0.247143 0 0.522857C0 1.01 0.669023 3.43214 3.11111 6.63214C4.73866 8.81643 7.03074 10 9.11582 10C10.3691 10 10.5221 9.73714 10.5221 9.285C10.5221 7.19786 10.4089 7.00071 11.0366 7.00071C11.3276 7.00071 11.8287 7.13786 12.9987 8.19143C14.336 9.44071 14.5558 10 15.3043 10H17.2723C17.8334 10 18.1176 9.73714 17.9541 9.21857C17.5799 8.12786 15.0508 5.88429 14.9368 5.73429Z" fill="#F7ECD6"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.20241 13.1952L4.78161 13.5336C5.75836 14.1032 6.86927 14.4023 8 14.4C9.2658 14.4 10.5032 14.0246 11.5556 13.3214C12.6081 12.6182 13.4284 11.6186 13.9128 10.4492C14.3972 9.27972 14.524 7.99289 14.277 6.75142C14.0301 5.50994 13.4205 4.36957 12.5255 3.47451C11.6304 2.57946 10.4901 1.96992 9.24858 1.72297C8.0071 1.47603 6.72028 1.60277 5.55083 2.08717C4.38139 2.57157 3.38184 3.39187 2.6786 4.44435C1.97536 5.49682 1.60001 6.73419 1.60001 7.99999C1.60001 9.14879 1.90161 10.2504 2.46721 11.2192L2.80481 11.7984L2.28241 13.7192L4.20241 13.1952ZM0.0032107 16L1.08481 12.0256C0.372121 10.8039 -0.0023125 9.41438 1.07458e-05 7.99999C1.07458e-05 3.5816 3.58161 0 8 0C12.4184 0 16 3.5816 16 7.99999C16 12.4184 12.4184 16 8 16C6.58623 16.0023 5.19733 15.6281 3.97601 14.916L0.0032107 16ZM5.11281 4.2464C5.22001 4.2384 5.328 4.2384 5.4352 4.2432C5.4784 4.2464 5.52161 4.2512 5.56481 4.256C5.69201 4.2704 5.832 4.348 5.8792 4.4552C6.1176 4.99599 6.3496 5.54079 6.5736 6.08719C6.6232 6.20879 6.5936 6.36479 6.4992 6.51679C6.43428 6.61958 6.36405 6.71891 6.2888 6.81439C6.1984 6.93039 6.004 7.14319 6.004 7.14319C6.004 7.14319 5.9248 7.23759 5.9552 7.35519C5.9664 7.39999 6.0032 7.46479 6.0368 7.51919L6.084 7.59519C6.2888 7.93679 6.564 8.28319 6.9 8.60959C6.996 8.70239 7.0896 8.79759 7.1904 8.88639C7.5648 9.21679 7.9888 9.48639 8.4464 9.68639L8.4504 9.68799C8.5184 9.71759 8.5528 9.73359 8.652 9.77599C8.7016 9.79679 8.7528 9.81519 8.8048 9.82879C8.85854 9.84248 8.91513 9.8399 8.9674 9.82138C9.01967 9.80287 9.06526 9.76925 9.0984 9.72479C9.6776 9.02319 9.7304 8.97759 9.7352 8.97759V8.97919C9.77544 8.94166 9.82324 8.91318 9.8754 8.89565C9.92756 8.87813 9.98286 8.87197 10.0376 8.87759C10.0856 8.88079 10.1344 8.88959 10.1792 8.90959C10.604 9.10399 11.2992 9.40719 11.2992 9.40719L11.7648 9.61599C11.8432 9.65359 11.9144 9.74239 11.9168 9.82799C11.92 9.88159 11.9248 9.96799 11.9064 10.1264C11.8808 10.3336 11.8184 10.5824 11.756 10.7128C11.7133 10.8018 11.6565 10.8833 11.588 10.9544C11.5073 11.0391 11.4189 11.1163 11.324 11.1848C11.2912 11.2095 11.2578 11.2335 11.224 11.2568C11.1245 11.3199 11.0223 11.3786 10.9176 11.4328C10.7116 11.5422 10.4841 11.605 10.2512 11.6168C10.1032 11.6248 9.9552 11.636 9.8064 11.628C9.8 11.628 9.352 11.5584 9.352 11.5584C8.21461 11.2592 7.16272 10.6988 6.28 9.92159C6.0992 9.76239 5.932 9.59119 5.76081 9.42079C5.04881 8.71279 4.51121 7.94879 4.18481 7.22719C4.01774 6.87302 3.9275 6.48752 3.92001 6.09599C3.91671 5.61028 4.07548 5.13733 4.37121 4.752C4.42961 4.6768 4.48481 4.5984 4.58001 4.508C4.68161 4.412 4.74561 4.3608 4.81521 4.3256C4.90774 4.27922 5.0087 4.25201 5.11201 4.2456L5.11281 4.2464Z" fill="#F7ECD6"/>
+                            <path d="M4.20241 13.1952L4.78161 13.5336C5.75836 14.1032 6.86927 14.4023 8 14.4C9.2658 14.4 10.5032 14.0246 11.5556 13.3214C12.6081 12.6182 13.4284 11.6186 13.9128 10.4492C14.3972 9.27972 14.524 7.99289 14.277 6.75142C14.0301 5.50994 13.4205 4.36957 12.5255 3.47451C11.6304 2.57946 10.4901 1.96992 9.24858 1.72297C8.0071 1.47603 6.72028 1.60277 5.55083 2.08717C4.38139 2.57157 3.38184 3.39187 2.6786 4.44435C1.97536 5.49682 1.60001 6.73419 1.60001 7.99999C1.60001 9.14879 1.90161 10.2504 2.46721 11.2192L2.80481 11.7984L2.28241 13.7192L4.20241 13.1952ZM0.0032107 16L1.08481 12.0256C0.372121 10.8039 -0.0023125 9.41438 1.07458e-05 7.99999C1.07458e-05 3.5816 3.58161 0 8 0C12.4184 0 16 3.5816 16 7.99999C16 12.4184 12.4184 16 8 16C6.58623 16.0023 5.19733 15.6281 3.97601 14.916L0.0032107 16ZM5.11281 4.2464C5.22001 4.2384 5.328 4.2384 5.4352 4.2432C5.4784 4.2464 5.52161 4.2512 5.56481 4.256C5.69201 4.2704 5.832 4.348 5.8792 4.4552C6.1176 4.99599 6.3496 5.54079 6.5736 6.08719C6.6232 6.20879 6.5936 6.36479 6.4992 6.51679C6.43428 6.61958 6.36405 6.71891 6.2888 6.81439C6.1984 6.93039 6.004 7.14319 6.004 7.14319C6.004 7.14319 5.9248 7.23759 5.9552 7.35519C5.9664 7.39999 6.0032 7.46479 6.0368 7.51919L6.084 7.59519C6.2888 7.93679 6.564 8.28319 6.9 8.60959C6.996 8.70239 7.0896 8.79759 7.1904 8.88639C7.5648 9.21679 7.9888 9.48639 8.4464 9.68639L8.4504 9.68799C8.5184 9.71759 8.5528 9.73359 8.652 9.77599C8.7016 9.79679 8.7528 9.81519 8.8048 9.82879C8.85854 9.84248 8.91513 9.8399 8.9674 9.82138C9.01967 9.80287 9.06526 9.76925 9.0984 9.72479C9.6776 9.02319 9.7304 8.97759 9.7352 8.97759V8.97919C9.77544 8.94166 9.82324 8.91318 9.8754 8.89565C9.92756 8.87813 9.98286 8.87197 10.0376 8.87759C10.0856 8.88079 10.1344 8.88959 10.1792 8.90959C10.604 9.10399 11.2992 9.40719 11.2992 9.40719L11.7648 9.61599C11.8432 9.65359 11.9144 9.74239 11.9168 9.82799C11.92 9.88159 11.9248 9.96799 11.9064 10.1264C11.8808 10.3336 11.8184 10.5824 11.756 10.7128C11.7133 10.8018 11.6565 10.8833 11.588 10.9544C11.5073 11.0391 11.4189 11.1163 11.324 11.1848C11.2912 11.2095 11.2578 11.2335 11.224 11.2568C11.1245 11.3199 11.0223 11.3786 10.9176 11.4328C10.7116 11.5422 10.4841 11.605 10.2512 11.6168C10.1032 11.6248 9.9552 11.636 9.8064 11.628C9.8 11.628 9.352 11.5584 9.352 11.5584C8.21461 11.2592 7.16272 10.6988 6.28 9.92159C6.0992 9.76239 5.932 9.59119 5.76081 9.42079C5.04881 8.71279 4.51121 7.94879 4.18481 7.22719C4.01774 6.87302 3.9275 6.48752 3.92001 6.09599C3.91671 5.61028 4.07548 5.13733 4.37121 4.752C4.42961 4.6768 4.48481 4.5984 4.58001 4.508C4.68161 4.412 4.74561 4.3608 4.81521 4.3256C4.90774 4.27922 5.0087 4.25201 5.11201 4.2456L5.11281 4.2464Z" fill="#F7ECD6" fill-opacity="0.2"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer__address">
+                    630030, Новосибирск, Новосибирская обл., ул. Первомайская, 198
+                </p>
+                <div class="footer__email">
+                    <a href="mailto:belkin123@ngs.ru" class="mail">belkin123@ngs.ru</a>
+                </div>
+                <div class="footer__phone">
+                    <a href="tel:8 (901) 459 40 06" class="tel">8 (901) 459 40 06</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="left">
+                    <a href="#">Политика конфидециальности</a>
+                    <p class="copy">©2022 sparta-nsk.ru</p>
+                </div>
+                <div class="center">
+                    <p class="text"><a href="mailto:belkin123@ngs.ru">belkin123@ngs.ru</a>  — электронная почта для обращений с вопросом о своих персональных данных, в том числе об их удалении</p>
+                </div>
+                <div class="right">
+                    <div>
+                        <a href="#" class="link">Создание сайтов</a>
+                        <a href="#" class="link">Продвижение сайтов</a>
+                    </div>
+                    <img src="img/kontur.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+         $('.services2__box').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: false,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                    }
+                ]
+            });
+        // if (window.innerWidth < 768) {
+           
+        // };
+    </script>
+</body>
+</html>

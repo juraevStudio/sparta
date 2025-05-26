@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Colus';
+    src: url('Colus-Regular.eot');
+    src: local('Colus Regular'), local('Colus-Regular'),
+        url('Colus-Regular.eot') format('eot');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Colus';
+    src: url('Colus-Regular.otf');
+    src: local('Colus Regular'), local('Colus-Regular'),
+        url('Colus-Regular.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Colus';
+    src: url('Colus-Regular.ttf');
+    src: local('Colus Regular'), local('Colus-Regular'),
+        url('Colus-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Colus';
+    src: url('Colus-Regular.woff');
+    src: local('Colus Regular'), local('Colus-Regular'),
+        url('Colus-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Colus';
+    src: url('Colus-Regular.woff2');
+    src: local('Colus Regular'), local('Colus-Regular'),
+        url('Colus-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
